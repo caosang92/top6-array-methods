@@ -68,6 +68,7 @@ const customUsers2 = users.map((user) => {
     }
 });
 console.log({ customUsers2 });
+
 //4. 
 
 
