@@ -69,6 +69,39 @@ const customUsers2 = users.map((user) => {
 });
 console.log({ customUsers2 });
 
-//4. 
+//4. REDUCE
+// Viết hàm để chuyển đối mảng thành object như bên dưới sử dụng reduce()
+// const itemList = [
+//   { id: 'key1', value: 'Superman' },
+//   { id: 'key2', value: 'Wonder Woman' },
+//   { id: 'key3', value: 'Spider man' },
+// ];
+// 
+// is converted to 
+// 
+// const itemMap = {
+//   key1: 'Superman',
+//   key2: 'Wonder Woman',
+//   key3: 'Spider man'
+// };
+// 
+// to use later as itemMap.key1, O(1)
+// instead of look up in itemList with id = key1, 0(n)
+const arrayToObject = (itemList) => {
+    return itemList.reduce((itemMap, item) => {
+        itemMap[item.id] = item.value;
+        return itemMap;
+    }, {});
+};
+
+const itemList = [
+    { id: 'key1', value: 'Superman' },
+    { id: 'key2', value: 'Wonder Woman' },
+    { id: 'key3', value: 'Spider man' },
+];
+console.log(arrayToObject(itemList));
+
+
+
 
 
